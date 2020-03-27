@@ -10,10 +10,44 @@
         <scene sceneID="Hf0-1t-Tzx">
             <objects>
                 <tableViewController id="6Pa-qi-2Kd" customClass="RecipesTableViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eJP-48-EE4">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eJP-48-EE4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="1Kh-S9-nba" userLabel="CM View">
+                            <rect key="frame" x="0.0" y="380" width="414" height="297"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homei" translatesAutoresizingMaskIntoConstraints="NO" id="Q4D-eV-W8d" userLabel="Image View 1">
+                                    <rect key="frame" x="8" y="8" width="203" height="123"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="caskpubkitchen" translatesAutoresizingMaskIntoConstraints="NO" id="yXF-hf-mD0" userLabel="Image View 3">
+                                    <rect key="frame" x="33" y="151" width="150" height="126"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="upstate" translatesAutoresizingMaskIntoConstraints="NO" id="V5F-XQ-XK4" userLabel="Image View 2">
+                                    <rect key="frame" x="208" y="139" width="198" height="150"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="datacell" rowHeight="324" id="V9g-UT-y6Y" customClass="RecipeTableViewCell" customModule="FoodPin" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="324"/>
@@ -22,8 +56,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="324"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9SV-zB-OB2">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9SV-zB-OB2">
+                                            <rect key="frame" x="8" y="10" width="398" height="250"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="250" id="TgU-J7-C0X"/>
                                             </constraints>
@@ -34,13 +68,13 @@
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Xfz-CT-Kzk">
-                                            <rect key="frame" x="28" y="265" width="358" height="43"/>
+                                            <rect key="frame" x="28" y="263" width="358" height="43.5"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dl0-BS-qtD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="299" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="299" height="43.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RqC-aq-NxZ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="299" height="43"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="299" height="43.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVj-7I-AHi">
                                                                     <rect key="frame" x="0.0" y="0.0" width="47" height="20.5"/>
@@ -49,7 +83,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ws0-c6-g6v">
-                                                                    <rect key="frame" x="0.0" y="25.5" width="33.5" height="17.5"/>
+                                                                    <rect key="frame" x="0.0" y="25.5" width="33.5" height="18"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -69,16 +103,17 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart-tick" translatesAutoresizingMaskIntoConstraints="NO" id="9e8-r1-C7a" userLabel="Heart Image View">
                                             <rect key="frame" x="364" y="110" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="9SV-zB-OB2" secondAttribute="trailing" id="0c3-GA-Vwi"/>
                                         <constraint firstItem="Xfz-CT-Kzk" firstAttribute="leading" secondItem="L5A-C3-Xl8" secondAttribute="leadingMargin" constant="8" id="6sK-de-8vV" userLabel="Stack View.leading = leadingMargin + 8"/>
-                                        <constraint firstItem="Xfz-CT-Kzk" firstAttribute="top" secondItem="9SV-zB-OB2" secondAttribute="bottom" constant="15" id="ULa-o7-HDL"/>
+                                        <constraint firstItem="9SV-zB-OB2" firstAttribute="leading" secondItem="L5A-C3-Xl8" secondAttribute="leading" constant="8" id="NoD-jh-dx2"/>
+                                        <constraint firstItem="Xfz-CT-Kzk" firstAttribute="top" secondItem="9SV-zB-OB2" secondAttribute="bottom" constant="3" id="ULa-o7-HDL"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Xfz-CT-Kzk" secondAttribute="trailing" constant="8" id="nQ8-4O-1T2" userLabel="trailingMargin = Stack View.trailing + 8"/>
-                                        <constraint firstItem="9SV-zB-OB2" firstAttribute="top" secondItem="L5A-C3-Xl8" secondAttribute="top" id="sbH-S5-lIx"/>
-                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Xfz-CT-Kzk" secondAttribute="bottom" constant="5" id="tXk-hK-vt8"/>
-                                        <constraint firstItem="9SV-zB-OB2" firstAttribute="leading" secondItem="L5A-C3-Xl8" secondAttribute="leading" id="yGm-xi-0pJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="9SV-zB-OB2" secondAttribute="trailing" constant="8" id="q5n-4z-wUf"/>
+                                        <constraint firstItem="9SV-zB-OB2" firstAttribute="top" secondItem="L5A-C3-Xl8" secondAttribute="top" constant="10" id="sbH-S5-lIx"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Xfz-CT-Kzk" secondAttribute="bottom" id="tXk-hK-vt8"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -102,6 +137,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="caskpubkitchen" width="480" height="480"/>
         <image name="heart-tick" width="22" height="21"/>
+        <image name="homei" width="480" height="480"/>
+        <image name="upstate" width="480" height="480"/>
     </resources>
 </document>

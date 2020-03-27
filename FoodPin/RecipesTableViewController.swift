@@ -35,6 +35,8 @@ class RecipesTableViewController: UITableViewController {
         
         cell.heartImageView.isHidden = !self.restaurantIsVisited[indexPath.row]
         
+       // tableView.separatorStyle = UITableViewCell.SeparatorStyle(rawValue: 0)! //Избавляемся от сепаратора между ячейками. Это же сделано в Storyboard через атрибут сепаратора
+        
         return cell }
 
     override func numberOfSections(in tableView: UITableView) -> Int { return 1
@@ -74,6 +76,7 @@ class RecipesTableViewController: UITableViewController {
         let checkInAction = UIAlertAction(title: checkInTitle, style: .default, handler: {
             (action:UIAlertAction!) -> Void in
             let cell = tableView.cellForRow(at: indexPath) as? RecipeTableViewCell
+            
             
             // Solution to exercise 1
             //            cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .none : .checkmark
