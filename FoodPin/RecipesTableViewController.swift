@@ -183,9 +183,26 @@ class RecipesTableViewController: UITableViewController {
         return swipeConfiguration
     }
     
-//    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//          TODO: Добваить на свайп влево действие аналогичное добавлению в избранное или удалению из него
-//        let swipeConfiguration: UISwipeActionsConfiguration
-//        return swipeConfiguration
-//    }
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let checkAction = UIContextualAction(style: .normal, title: "Выбрать")
+        { (action, sourceView, completionHandler) in
+           
+            let cell = tableView.cellForRow(at: indexPath) as? RecipeTableViewCell
+            
+            cell?.heartImageView.isHidden = self.restaurantIsVisited[indexPath.row]
+            
+            self.restaurantIsVisited[indexPath.row] = self.restaurantIsVisited[indexPath.row] ? false : true
+            
+            completionHandler(true)
+        }
+        checkAction.image = (checkAction.image != nil) ? UIImage(systemName: "checkmark") : UIImage(systemName: "arrow.uturn.left")
+        checkAction.backgroundColor = UIColor(red: 26.0/255.0, green: 163.0/255.0 , blue: 74.0/255.0, alpha: 1.0)
+        //          TODO: Добваить на свайп влево действие аналогичное добавлению в избранное или удалению из него
+        //    arrow.uturn.left
+        //    checkmark
+        let swipeConfiguration = UISwipeActionsConfiguration(actions: [checkAction])
+        return swipeConfiguration
+        
+    }
 }
